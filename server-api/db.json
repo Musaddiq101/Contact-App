@@ -1,0 +1,24 @@
+{
+  "contacts": [
+    {
+      "id": "fd7872f4-22f9-46a1-be54-d3195b485827",
+      "name": "Musaddiq Ali",
+      "email": "mbhutto34@gmail.com"
+    },
+    {
+      "id": "6cff092f-5063-4b7f-8aec-0d61939b818b",
+      "name": "joe",
+      "email": "joemama@gmail.com"
+    },
+    {
+      "id": "5f312b97-a437-48d5-ab5c-114a7f773b86",
+      "name": "Angelina",
+      "email": "yu@test.com"
+    },
+    {
+      "id": "4e0342cc-ca8e-44ef-b528-2190f99138f2",
+      "name": "Masood ",
+      "email": "u36094320@connect.hku.hk"
+    }
+  ]
+}

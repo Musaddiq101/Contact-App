@@ -1,44 +1,54 @@
-import React, {useRef} from "react";
+import React, {useState, useEffect} from "react";
 import ContactCard from "./ContactCard";
 import {Link} from "react-router-dom";
+import { useContactsCrud } from "../context/ContactsCrudContext";
 
 function ContactList(props) {
+    const {contacts, retrieveContacts, searchTerm, searchResults, searchHandler } = useContactsCrud();
 
-    const inputEl = useRef("");
+    useEffect(() => {
+        retrieveContacts();
+    }, []);
 
-    function deleteContact(id) {
-        props.getContactId(id)
-    };
-
-    function getSearchTerm() {
-        props.searchKeyword(inputEl.current.value);
-
-    }
     //rendering each contact in the list
-    const renderContactList = props.contacts.map(contact => {
+    const renderContactList = (searchTerm.length < 1 ? contacts : searchResults).map((contact) => {
         return (
-            <ContactCard contact={contact} clickHandler={deleteContact} key={contact.id}/>
+            <ContactCard contact={contact}  key={contact.id}/>
         );
     });
 
+    function onUserSearch(e) {
+        searchHandler(e.target.value)
+
+    };
+
     return (
-        <div className="main" >
-            <h2>Contact List
-                <Link to="/add">
-                    <button className="ui button blue right">Add Contact</button>
-                </Link>
-            </h2>
-            <div className="ui search" >
-                <div className="ui icon input">
-                    <input ref={inputEl}className="prompt" type="text" placeholder="Search Contacts" value={props.term} onChange={getSearchTerm}/>
-                    <i className="search icon"></i>
-                </div>
+        <div className="main ui segment" style={{paddingTop: "60px"}}>
+          <h2>
+            Contact List
+            <Link to="/add">
+              <button className="ui right floated button blue ">Add Contact</button>
+            </Link>
+          </h2>
+          <div className="ui fluid search">
+            <div className="ui icon input">
+              <input
+                type="text"
+                placeholder="Search Contacts"
+                className="prompt"
+                value={searchTerm}
+                onChange={(e) => onUserSearch(e)}
+              />
+              <i className="search icon"></i>
             </div>
-            <div className="ui celled list">
-            {renderContactList.length > 0 ? renderContactList : "No Contacts Available"}
-            </div>
+          </div>
+          <div className="ui celled list">
+            {renderContactList.length > 0
+              ? renderContactList
+              : "No Contacts available"}
+          </div>
         </div>
-        
-    );
-}
+      );
+};
+
 export default ContactList;

@@ -1,13 +1,15 @@
 import React from "react";
 import user from "../images/user.jpg";
-import {Link} from "react-router-dom"
+import {Link, useLocation} from "react-router-dom"
 
 
 function ContactDetail(props) {
-    const {name, email} = props.location.state.contact;
+    const location = useLocation();
+    const {name, email} = location.state.contact;
+
     return (
-        <div className="main">
-            <div className="ui card centered">
+        <div className="main" style={{paddingTop: "60px"}}>
+            <div className="ui centered card">
                 <div className="image">
                     <img src={user} alt="user" />
                 </div>
@@ -16,10 +18,16 @@ function ContactDetail(props) {
                     <div className="description">{email}</div>
                 </div>
             </div>
-            <div className="center-div">
-                <Link to="/">
-                    <button className="ui button blue center">Back tp CONTACT lIST</button>
-                </Link>  
+            <div className="ui container">
+                <div className="ui grid ">
+                    <div className="six wide column"></div>
+                    <div className="four wide column">
+                        <Link to="/">
+                            <button className="ui fluid button blue ">Back to Contact List</button>
+                        </Link>
+                    </div> 
+                    <div className="four wide column"></div>    
+                </div> 
             </div>
         </div>
     );
