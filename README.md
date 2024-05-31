@@ -17,19 +17,19 @@ Download all the dependencies:
 
 In the project directory, to run the react app:
 
-```bash
-npm start
-```
+    ```bash
+    npm start
+    ```
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 In the project directory, to run the JSON server as well along with the app:
 
- ```
- cd server-api
- npm start
- ```
+    ```
+    cd server-api
+    npm start
+    ```
 
 
 Runs the server in the development mode.\
