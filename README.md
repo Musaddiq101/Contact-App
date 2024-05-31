@@ -1,7 +1,7 @@
 # Contact Manager App
 A contact manager app weher you can add your contacts, delete and update them.'
 
-### Install Dependencies and Run
+## Install Dependencies and Run
 
 Download all the dependencies:
 1. For React:
