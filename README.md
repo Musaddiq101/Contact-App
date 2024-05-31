@@ -4,11 +4,11 @@
 
 Download all the dependancies:
 1. For React:
-### `npm install`
+    ### `npm install`
 
 2. For JSON Server:
-### `cd server-api`
-### `npm install`
+    ### `cd server-api`
+    ### `npm install`
 
 In the project directory, to run the react app:
 
