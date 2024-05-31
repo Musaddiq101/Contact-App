@@ -4,7 +4,9 @@
 
 Download all the dependancies:
 1. For React:
-    ```npm install```
+    ```bash
+    npm install
+    ```
 
 2. For JSON Server:
     ```bash
@@ -14,7 +16,9 @@ Download all the dependancies:
 
 In the project directory, to run the react app:
 
-```npm start```
+```bash
+npm start
+```
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
