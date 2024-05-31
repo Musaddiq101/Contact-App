@@ -1,8 +1,9 @@
 # Contact Manager App
+A contact manager app weher you can add your contacts, delete and update them.'
 
-## Available Scripts
+### Install Dependencies and Run
 
-Download all the dependancies:
+Download all the dependencies:
 1. For React:
     ```bash
     npm install
