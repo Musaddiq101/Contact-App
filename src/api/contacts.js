@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const apiUrl = "https://Musaddiq101.github.io/Json-serve-contacts/db.json"
+const apiUrl ="https://my-json-server.typicode.com/Musaddiq101/Json-serve-contacts";
 
 export default axios.create({
     baseURL: apiUrl,
